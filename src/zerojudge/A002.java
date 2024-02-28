@@ -1,16 +1,14 @@
-package problems;
-
 import java.util.Scanner;
 
-public class D051 {
-
+public class A002 {
 	public static void main(String[] args) {
 		
 		Scanner in = new Scanner(System.in);
+		
 		try {
-			double f = in.nextDouble();
-			double c = (f-32)*5/9;
-			System.out.printf("%.3f", c);
+			int a = in.nextInt();
+			int b = in.nextInt();
+			System.out.println(a+b);
 		} finally {
 			in.close();
 		}

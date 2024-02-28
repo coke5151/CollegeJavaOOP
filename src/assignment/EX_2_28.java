@@ -1,5 +1,3 @@
-package practice;
-
 import java.util.Scanner;
 
 public class EX_2_28 {

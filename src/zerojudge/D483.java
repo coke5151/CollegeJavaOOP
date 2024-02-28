@@ -1,5 +1,3 @@
-package problems;
-
 public class D483 {
 
 	public static void main(String[] args) {

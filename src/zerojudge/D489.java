@@ -1,5 +1,3 @@
-package problems;
-
 import java.util.Scanner;
 
 public class D489 {

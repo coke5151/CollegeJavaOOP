@@ -1,16 +1,12 @@
-package problems;
-
 import java.util.Scanner;
 
-public class A002 {
+public class D049 {
+
 	public static void main(String[] args) {
-		
 		Scanner in = new Scanner(System.in);
-		
 		try {
-			int a = in.nextInt();
-			int b = in.nextInt();
-			System.out.println(a+b);
+			int i = in.nextInt();
+			System.out.println(i-1911);
 		} finally {
 			in.close();
 		}
