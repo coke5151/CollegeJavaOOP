@@ -1,4 +1,4 @@
-package EX_7_30;
+package EX_7_31;
 
 // Fig. 7.10: DeckOfCards.java
 // DeckOfCards class represents a deck of playing cards.
@@ -49,6 +49,48 @@ public class DeckOfCards {
         } else {
             return null; // return null to indicate that all Cards were dealt
         }
+    }
+
+    public int compareHands(Card[] hand1, Card[] hand2) {
+        int handPower1 = 0;
+        int handPower2 = 0;
+
+        if (isFourOfAKind(hand1))
+            handPower1 = 10;
+        else if (isFullHouse(hand1))
+            handPower1 = 9;
+        else if (isFlush(hand1))
+            handPower1 = 8;
+        else if (isStraight(hand1))
+            handPower1 = 7;
+        else if (isThreeOfAKind(hand1))
+            handPower1 = 6;
+        else if (isTwoPairs(hand1))
+            handPower1 = 5;
+        else if (isPair(hand1))
+            handPower1 = 4;
+
+        if (isFourOfAKind(hand2))
+            handPower2 = 10;
+        else if (isFullHouse(hand2))
+            handPower2 = 9;
+        else if (isFlush(hand2))
+            handPower2 = 8;
+        else if (isStraight(hand2))
+            handPower2 = 7;
+        else if (isThreeOfAKind(hand2))
+            handPower2 = 6;
+        else if (isTwoPairs(hand2))
+            handPower2 = 5;
+        else if (isPair(hand2))
+            handPower2 = 4;
+
+        if (handPower1 > handPower2)
+            return 1;
+        else if (handPower2 > handPower1)
+            return -1;
+        else
+            return 0;
     }
 
     public boolean isPair(Card... cards) {
