@@ -1,6 +1,3 @@
-// Fig. 7.11: DeckOfCardsTest.java
-// Card shuffling and dealing.
-
 package EX_7_31;
 
 public class DeckOfCardsTest {

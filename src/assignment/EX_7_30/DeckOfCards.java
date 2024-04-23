@@ -1,53 +1,40 @@
 package EX_7_30;
 
-// Fig. 7.10: DeckOfCards.java
-// DeckOfCards class represents a deck of playing cards.
 import java.security.SecureRandom;
 
 public class DeckOfCards {
-    // random number generator
     private static final SecureRandom randomNumbers = new SecureRandom();
-    private static final int NUMBER_OF_CARDS = 52; // constant # of Cards
+    private static final int NUMBER_OF_CARDS = 52;
 
-    private Card[] deck = new Card[NUMBER_OF_CARDS]; // Card references
-    private int currentCard = 0; // index of next Card to be dealt (0-51)
+    private Card[] deck = new Card[NUMBER_OF_CARDS];
+    private int currentCard = 0;
 
-    // constructor fills deck of Cards
     public DeckOfCards() {
         String[] faces = { "Ace", "Deuce", "Three", "Four", "Five", "Six",
                 "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King" };
         String[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
-
-        // populate deck with Card objects
         for (int count = 0; count < deck.length; count++) {
             deck[count] = new Card(faces[count % 13], suits[count / 13]);
         }
     }
 
-    // shuffle deck of Cards with one-pass algorithm
     public void shuffle() {
-        // next call to method dealCard should start at deck[0] again
         currentCard = 0;
 
-        // for each Card, pick another random Card (0-51) and swap them
         for (int first = 0; first < deck.length; first++) {
-            // select a random number between 0 and 51
             int second = randomNumbers.nextInt(NUMBER_OF_CARDS);
 
-            // swap current Card with randomly selected Card
             Card temp = deck[first];
             deck[first] = deck[second];
             deck[second] = temp;
         }
     }
 
-    // deal one Card
     public Card dealCard() {
-        // determine whether Cards remain to be dealt
         if (currentCard < deck.length) {
-            return deck[currentCard++]; // return current Card in array
+            return deck[currentCard++];
         } else {
-            return null; // return null to indicate that all Cards were dealt
+            return null;
         }
     }
 
@@ -138,8 +125,7 @@ public class DeckOfCards {
 
         if (sortedCards[0].getFace() == "Ace") {
             // situation1: Ace, Deuce, Three, Four, Five
-            // situation2: Ten, Jack, Queen, King, Ace (unsorted) → Ace, Ten, Jack, Queen,
-            // King (sorted)
+            // situation2: Ten, Jack, Queen, King, Ace (unsorted) → Ace, Ten, Jack, Queen, King (sorted)
             // 在 situation2 中，可以把 Ace 的 currentValue 當作 8 （跟 Nine 的 currentValue 相同）來判斷。
             boolean situation1 = isStraightForPart(currentValue = 0, sortedCards);
             boolean situation2 = isStraightForPart(currentValue = 8, sortedCards);

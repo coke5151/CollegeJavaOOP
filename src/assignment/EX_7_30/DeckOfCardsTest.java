@@ -1,10 +1,8 @@
-// Fig. 7.11: DeckOfCardsTest.java
-// Card shuffling and dealing.
-
 package EX_7_30;
 
 public class DeckOfCardsTest {
     public static void main(String[] args) {
+        System.out.println("Hand:");
         DeckOfCards myDeckOfCards = new DeckOfCards();
         myDeckOfCards.shuffle();
 
@@ -14,7 +12,7 @@ public class DeckOfCardsTest {
             hand[i] = myDeckOfCards.dealCard();
             System.out.printf("%-19s", hand[i]);
         }
-        System.out.println();
+        System.out.println("\n牌型：");
         if (myDeckOfCards.isPair(hand)) {
             System.out.println("a pair");
             noPair = false;
