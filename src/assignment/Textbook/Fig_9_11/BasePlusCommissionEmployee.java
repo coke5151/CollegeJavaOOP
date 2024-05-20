@@ -1,4 +1,4 @@
-package Textbook.Fig_9_7_11;
+package Textbook.Fig_9_11;
 
 // Fig. 9.11: BasePlusCommissionEmployee.java
 // BasePlusCommissionEmployee class inherits from CommissionEmployee 

@@ -1,4 +1,4 @@
-package Textbook.Fig_9_7_11;
+package Textbook.Fig_9_11;
 
 // Fig. 9.7: BasePlusCommissionEmployeeTest.java
 // BasePlusCommissionEmployee test program.

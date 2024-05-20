@@ -29,11 +29,11 @@ public class PayableInterfaceTest {
             basePlusCommisionEmployee.setBaseSalary(newBaseSalary);
             System.out.printf("%n%s %n",
                   basePlusCommisionEmployee.toString(), // could invoke implicitly
-                  basePlusCommisionEmployee.getPaymentAmount() * 1.1);
+                  basePlusCommisionEmployee.getPaymentAmount());
          } else {
             System.out.printf("%n%s %n",
                   currentPayable.toString(), // could invoke implicitly
-                  currentPayable.getPaymentAmount() * 1.1);
+                  currentPayable.getPaymentAmount());
          }
       }
    }
