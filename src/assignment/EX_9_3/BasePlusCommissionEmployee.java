@@ -43,7 +43,7 @@ public class BasePlusCommissionEmployee {
    @Override
    public String toString() {
       return String.format("%s %s%n%s: %.2f", "base-salaried",
-            super.toString(), "base salary", getBaseSalary());
+            ce.toString(), "base salary", getBaseSalary());
    }
 
    public String getFirstName() {
